@@ -7,7 +7,7 @@ import AuthorNavBar from '../author/navbar'
 import AdminNavBar from '../admin/navbar'
 
 export const ProtectedRoutes = ({ user }) => {
- if (user.role === "author") {
+ if (user.role === "AUTHOR") {
         return (
           <>
            <AuthorNavBar/>
@@ -21,7 +21,7 @@ export const ProtectedRoutes = ({ user }) => {
     
 }
 
- else if(user.role === "admin"){
+ else if(user.role === "ADMIN"){
     return <>
       <AdminNavBar/>
      <Routes>
